@@ -41,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [1] = LAYOUT_split_3x6_3( //Numpad
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      ALT_TAB, XXXXXXX,    SE_7,    SE_8,    SE_9, XXXXXXX,                      SE_CIRC, SE_AMPR, SE_DQUO, SE_PIPE, SE_BSLS, XXXXXXX,
+      ALT_TAB, XXXXXXX,    SE_7,    SE_8,    SE_9, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LSFT, XXXXXXX,    SE_4,    SE_5,    SE_6, XXXXXXX,                      XXXXXXX, SE_LPRN, SE_LCBR, SE_LBRC, SE_LABK, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+---------+-------+--------|
@@ -53,11 +53,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [2] = LAYOUT_split_3x6_3( //Symbols
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      XXXXXXX,   SE_AT, SE_HASH,  SE_DLR, SE_PERC, SE_AMPR,                      SE_EXLM, SE_ARNG, SE_ADIA, SE_ODIA, XXXXXXX, XXXXXXX,
+      XXXXXXX, XXXXXXX, XXXXXXX, SE_PIPE, SE_PERC, SE_AMPR,                      SE_EXLM, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, SE_PLUS,  SE_EQL,                      SE_QUES, XXXXXXX, XXXXXXX, SE_TILD, XXXXXXX, XXXXXXX,
+      XXXXXXX, XXXXXXX, XXXXXXX, SE_CIRC, SE_PLUS,  SE_EQL,                      SE_QUES, SE_ARNG, SE_ADIA, SE_ODIA, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      SE_SLSH, SE_DQUO, SE_UNDS,  XXXXXXX, XXXXXXX, XXXXXXX,
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                     XXXXXXX , SE_SLSH, SE_BSLS, SE_DQUO, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           KC_LSFT,  KC_SPC,   MO(3),    _______, KC_BSPC, XXXXXXX
                                       //`--------------------------'  `--------------------------'
@@ -65,9 +65,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [3] = LAYOUT_split_3x6_3( //Arrows
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      XXXXXXX, KC_RGUI, KC_RCTL, KC_RALT,  KC_TAB, KC_RSFT,                      KC_RSFT,  KC_TAB, KC_RALT, KC_RCTL, KC_RGUI, XXXXXXX,
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_AUDIO_VOL_UP,                      XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_LEFT, KC_DOWN,   KC_UP,KC_RIGHT, XXXXXXX, XXXXXXX,
+      XXXXXXX, XXXXXXX, KC_MEDIA_PREV_TRACK, KC_MEDIA_PLAY_PAUSE, KC_MEDIA_NEXT_TRACK, KC_AUDIO_VOL_DOWN,                      KC_LEFT, KC_DOWN,   KC_UP,KC_RIGHT, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        MO(4), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|

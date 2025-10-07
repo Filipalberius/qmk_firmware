@@ -29,9 +29,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_DEL,     SE_A,    SE_S,    SE_D,    SE_F,    SE_G,                         SE_H,    SE_J,    SE_K,    SE_L, SE_ODIA, SE_ADIA,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LCTL,    SE_Z,    SE_X,    SE_C,    SE_V,    SE_B,                         SE_N,    SE_M, SE_COMM,  SE_DOT, SE_MINS, KC_LGUI,
+      KC_LCTL,    SE_Z,    SE_X,    SE_C,    SE_V,    SE_B,                         SE_N,    SE_M, SE_COMM,  SE_DOT, SE_MINS, KC_LALT,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LSFT,  KC_SPC,   MO(1),      MO(2), KC_BSPC, KC_LALT
+                                          KC_LSFT,  KC_SPC,   MO(1),      MO(2), KC_BSPC, KC_LGUI
                                       //`--------------------------'  `--------------------------'
   ),
 
@@ -43,7 +43,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+---------+-------+--------|
       XXXXXXX,    SE_0,    SE_1,    SE_2,    SE_3, SE_PLUS,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LSFT,  KC_SPC, _______,      MO(3), KC_BSPC, KC_LALT
+                                          KC_LSFT,  KC_SPC, _______,      MO(3), KC_BSPC, KC_LGUI
                                       //`--------------------------'  `--------------------------'
   ),
 
@@ -51,11 +51,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       XXXXXXX, SE_PERC, SE_BSLS, SE_EXLM, SE_DQUO, SE_TILD,                     XXXXXXX, KC_UNDO, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, SE_AMPR, SE_SLSH, SE_QUES, SE_QUOT, SE_ASTR,                     KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT, XXXXXXX, XXXXXXX, 
+      XXXXXXX, SE_AMPR, SE_SLSH, SE_QUES, SE_QUOT, SE_ASTR,                     KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX, XXXXXXX,  KC_CUT, KC_COPY, KC_PSTE, XXXXXXX,                     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LSFT,  KC_SPC,   MO(3),    _______, KC_BSPC, KC_LALT
+                                          KC_LSFT,  KC_SPC,   MO(3),    _______, KC_BSPC, KC_LGUI
                                       //`--------------------------'  `--------------------------'
   ),
 

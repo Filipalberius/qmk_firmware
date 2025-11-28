@@ -18,6 +18,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 //compile using command: qmk compile -kb crkbd -km combos
 
+// Left-hand home row mods
+#define HOME_S LGUI_T(SE_S)
+#define HOME_D LCTL_T(SE_D)
+#define HOME_F LSFT_T(SE_F)
+
+// Right-hand home row mods
+#define HOME_J RSFT_T(SE_J)
+#define HOME_K RCTL_T(SE_K)
+#define HOME_L RGUI_T(SE_L)
+
 #include QMK_KEYBOARD_H
 #include <stdio.h>
 #include <keymap_swedish.h>
@@ -27,11 +37,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       KC_TAB,     SE_Q,    SE_W,    SE_E,    SE_R,    SE_T,                         SE_Y,    SE_U,    SE_I,    SE_O,    SE_P, SE_ARNG,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_DEL,     SE_A,    SE_S,    SE_D,    SE_F,    SE_G,                         SE_H,    SE_J,    SE_K,    SE_L, SE_ODIA, SE_ADIA,
+      KC_DEL,     SE_A,  HOME_S,  HOME_D,  HOME_F,    SE_G,                         SE_H,  HOME_J,  HOME_K,  HOME_L, SE_ODIA, SE_ADIA,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LCTL,    SE_Z,    SE_X,    SE_C,    SE_V,    SE_B,                         SE_N,    SE_M, SE_COMM,  SE_DOT, SE_MINS, KC_LALT,
+      XXXXXXX,    SE_Z,    SE_X,    SE_C,    SE_V,    SE_B,                         SE_N,    SE_M, SE_COMM,  SE_DOT, SE_MINS, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LSFT,  KC_SPC,   MO(1),      MO(2), KC_BSPC, KC_LGUI
+                                          KC_CAPS,  KC_SPC,   MO(1),      MO(2), KC_BSPC, KC_LALT
                                       //`--------------------------'  `--------------------------'
   ),
 
@@ -43,7 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+---------+-------+--------|
       XXXXXXX,    SE_0,    SE_1,    SE_2,    SE_3, SE_PLUS,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LSFT,  KC_SPC, _______,      MO(3), KC_BSPC, KC_LGUI
+                                          KC_CAPS,  KC_SPC, _______,      MO(3), KC_BSPC, KC_LALT
                                       //`--------------------------'  `--------------------------'
   ),
 
@@ -55,7 +65,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX, XXXXXXX,  KC_CUT, KC_COPY, KC_PSTE, XXXXXXX,                     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LSFT,  KC_SPC,   MO(3),    _______, KC_BSPC, KC_LGUI
+                                          KC_CAPS,  KC_SPC,   MO(3),    _______, KC_BSPC, KC_LALT
                                       //`--------------------------'  `--------------------------'
   ),
 
@@ -86,10 +96,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 // combos
-const uint16_t PROGMEM combo_qwerty_escape[] = {SE_S, SE_D,  SE_F, COMBO_END};
-const uint16_t PROGMEM combo_qwerty_enter[] = {SE_J, SE_K,  SE_L, COMBO_END};
+const uint16_t PROGMEM combo_qwerty_escape[] = {HOME_S, HOME_D,  HOME_F, COMBO_END};
+const uint16_t PROGMEM combo_qwerty_enter[] = {HOME_J, HOME_K,  HOME_L, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
   COMBO(combo_qwerty_escape,     KC_ESC),
   COMBO(combo_qwerty_enter,      KC_ENT)
 };
+
+

@@ -31,5 +31,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define COMBO_COUNT 6
 #define MODS_SHIFT_MASK (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT))
 
-// #define TAPPING_FORCE_HOLD
-// #define TAPPING_TERM 100
+#define QUICK_TAP_TERM 0
+#define TAPPING_TERM 200
